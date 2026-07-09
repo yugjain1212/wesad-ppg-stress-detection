@@ -1,4 +1,4 @@
-# Codex Build Spec — WESAD PPG-Only Stress Detection (Raspberry Pi 4B Deployment)
+WESAD PPG-Only Stress Detection (Raspberry Pi 4B Deployment)
 
 ## 0. Context (read this first)
 

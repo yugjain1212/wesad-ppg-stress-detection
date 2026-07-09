@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# WESAD Dataset
+# We ignore the raw dataset and the generated CSV to avoid uploading huge files to GitHub
+dataset/
+wesad-stress-detection/ppg_only/data/dataset.csv
+
+# Evaluation results (optional, uncomment to track)
+# wesad-stress-detection/ppg_only/results/
+
+# Saved models (optional, uncomment to ignore)
+# wesad-stress-detection/ppg_only/saved_models/

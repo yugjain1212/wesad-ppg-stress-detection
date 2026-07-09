@@ -1,0 +1,5 @@
+# Raspberry Pi Deployment Configuration
+target_fs: 64         # Target sample rate (Hz), MUST match offline training
+sensor_fs: 100        # Native sample rate of the MAX30102 sensor
+window_sec: 60        # Rolling buffer length (seconds)
+stride_sec: 30        # Inference interval (seconds)

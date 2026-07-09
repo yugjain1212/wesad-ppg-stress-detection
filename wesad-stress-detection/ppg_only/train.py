@@ -41,10 +41,18 @@ def train_model(data_path, models_dir):
         pickle.dump(model, f)
         
     metadata = {
-        "model_type": "RandomForestClassifier",
-        "training_date": datetime.datetime.now().isoformat(),
-        "feature_names": feature_names,
-        "n_samples": len(y)
+       "model_type": "RandomForestClassifier",
+       "training_date": datetime.datetime.now().isoformat(),
+       "feature_names": feature_names,
+       "n_samples": len(y),
+       "model_selection_rationale": (
+         "Random Forest selected as deployment model. In LOSO comparison, RF had the "
+         "highest Accuracy (0.895) and F1 (0.822) of the three candidates (LR, RF, SVM). "
+         "SVM had marginally higher ROC-AUC (0.943 vs 0.938) and PR-AUC (0.896 vs 0.884), "
+         "but AUC reflects ranking quality across all thresholds, whereas the deployed "
+         "system commits to a single fixed decision threshold at inference time, making "
+         "Accuracy/F1 the more relevant metrics for this use case."
+     )
     }
     
     metadata_path = os.path.join(models_dir, 'model_metadata.json')
